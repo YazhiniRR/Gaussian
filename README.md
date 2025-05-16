@@ -8,10 +8,22 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
-1.Convert the system of equations into an augmented matrix.Swap rows if necessary to ensure that the pivot element is non-zero. 
-2. After converting the matrix into an upper triangular form, solve the system of equations by substituting the values of the variables starting from the last row.
-3. Start from the last row and substitute the known values into the equations above to find the values of the variables.
-4. This program will solve the system of equations A×X=B, where A is the coefficient matrix and B is the constant matrix.
+STEP 1:
+Input Initialization
+      *Read number of variables n using int(input()).
+      *Initialize augmented matrix a of size n x (n+1) using np.zeros().
+      *Fill matrix a with user input using nested loops and float(input()).
+STEP 2:
+Forward Elimination
+      *For each pivot row i, check a[i][i] != 0.0 to avoid division by zero (sys.exit() if violated).
+      *For rows below (j = i+1 to n-1), compute ratio = a[j][i] / a[i][i] and update row using a[j][k] = a[j][k] - ratio * a[i][k] for all columns k.
+STEP 3:
+Back Substitution
+      *Set x[n-1] = a[n-1][n] / a[n-1][n-1].
+      *For i from n-2 to 0, compute x[i] = (a[i][n] - Σ a[i][j]*x[j]) / a[i][i].
+STEP 4:
+Solution Output
+      *Print all variables x[i] using formatted output: print('X%d = %0.2f' % (i, x[i])).
 
 ## Program:
 ```
