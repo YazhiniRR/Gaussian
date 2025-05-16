@@ -8,6 +8,7 @@ To write a program to find the solution of a matrix using Gaussian Elimination.
 2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
 
 ## Algorithm
+```
 STEP 1:
 Input Initialization
       *Read number of variables n using int(input()).
@@ -24,7 +25,7 @@ Back Substitution
 STEP 4:
 Solution Output
       *Print all variables x[i] using formatted output: print('X%d = %0.2f' % (i, x[i])).
-
+```
 ## Program:
 ```
 /*
